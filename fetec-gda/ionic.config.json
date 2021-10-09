@@ -1,0 +1,7 @@
+{
+  "name": "FETEC GDA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

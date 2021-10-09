@@ -1,0 +1,6 @@
+{
+	"appId": "org.tecoding.fetec",
+	"appName": "FETEC GDA",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
