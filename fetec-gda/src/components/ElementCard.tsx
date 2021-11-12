@@ -1,13 +1,25 @@
-import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonImg } from '@ionic/react';
+import {
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonImg,
+} from "@ionic/react";
 
-const ElementCard: React.FC = () => {
+interface ContainerProps {
+  name: string;
+  founder: string;
+  imgPath: string;
+}
+
+const ElementCard: React.FC<ContainerProps> = ({ name, founder, imgPath }) => {
   return (
     <IonCard color="tertiary" button>
-        <IonImg src="/assets/images/example-1.jpg"></IonImg>
-        <IonCardHeader>
-            <IonCardTitle>Brand Name</IonCardTitle>
-            <IonCardSubtitle>Nombre de Fundador(a)</IonCardSubtitle>
-        </IonCardHeader>
+      <img src={imgPath} alt={name} />
+      <IonCardHeader>
+        <IonCardTitle>{name}</IonCardTitle>
+        <IonCardSubtitle>{founder}</IonCardSubtitle>
+      </IonCardHeader>
     </IonCard>
   );
 };
