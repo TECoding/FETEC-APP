@@ -21,24 +21,17 @@ const CardsGrid: React.FC<GridProps> = ({cards}) => {
 
     return (
         <IonGrid>
-          {cards.map((card) => (
-            <IonRow key={card.id}>
-              <IonCol size="6">
-                <ElementCard
-                  name={card.name}
-                  founder={card.founder}
-                  imgPath={card.imgPath}
-                />
-              </IonCol>
-              <IonCol size="6">
-                <ElementCard
-                  name={card.name}
-                  founder={card.founder}
-                  imgPath={card.imgPath}
-                />
-              </IonCol>
+            <IonRow>
+              {cards.map((card) => (
+                  <IonCol size="6"  key={card.id}>
+                    <ElementCard
+                      name={card.name}
+                      founder={card.founder}
+                      imgPath={card.imgPath}
+                    />
+                  </IonCol>
+              ))}
             </IonRow>
-          ))}
         </IonGrid>
     )
 };
