@@ -9,6 +9,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ElementCard from "../components/ElementCard";
+import CardsGrid from "../components/CardsGrid";
 import "./Home.css";
 import brands from "../data/brands";
 
@@ -26,7 +27,18 @@ const Home: React.FC = () => {
             <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonGrid>
+        
+        <CardsGrid cards={brands}/>
+
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Home;
+
+
+/*<IonGrid>
           {brands.map((brand) => (
             <IonRow key={brand.id}>
               <IonCol>
@@ -38,10 +50,4 @@ const Home: React.FC = () => {
               </IonCol>
             </IonRow>
           ))}
-        </IonGrid>
-      </IonContent>
-    </IonPage>
-  );
-};
-
-export default Home;
+        </IonGrid>*/

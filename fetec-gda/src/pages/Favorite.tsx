@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
-import './Favorite.css';
+import './Favorite.css'; 
 
 const Favorite: React.FC = () => {
   return (
