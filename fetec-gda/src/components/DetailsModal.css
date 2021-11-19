@@ -1,0 +1,35 @@
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+}
+
+.container .back {
+  top: 3%;
+  left: 5%;
+}
+
+.container .favorite {
+  top: 3%;
+  right: 5%;
+}
+
+.container h2 {
+  font-size: large;
+}
+
+.container .brand-name-section {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}

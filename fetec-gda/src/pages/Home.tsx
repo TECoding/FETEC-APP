@@ -34,6 +34,7 @@ const Home: React.FC = () => {
                   name={brand.name}
                   founder={brand.founder}
                   imgPath={brand.imgPath}
+                  description={brand.description}
                 />
               </IonCol>
             </IonRow>
