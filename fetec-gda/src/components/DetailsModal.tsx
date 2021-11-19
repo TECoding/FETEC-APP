@@ -19,7 +19,7 @@ interface ModalProps {
 const DetailsModal: React.FC<ModalProps> = (props) => {
   return (
     <IonContent>
-      <div className="container">
+      <div className="details-container">
         {/* Image Section with buttons */}
         <img src={props.brandImgPath} />
         <div className="btn back">
@@ -34,7 +34,7 @@ const DetailsModal: React.FC<ModalProps> = (props) => {
         </div>
         {/* Brand details section */}
         <div className="ion-text-left ion-margin-start ion-margin-end">
-          <div className="brand-name-section">
+          <div className="name-shareBtn-section">
             <IonText>
               <h1 className="ion-no-margin ion-margin-top">
                 {props.brandName}
@@ -75,7 +75,7 @@ const DetailsModal: React.FC<ModalProps> = (props) => {
         {/* Team Section */}
         <div>
           <IonText>
-            <h3>Equipo:</h3>
+            <h3 className="ion-margin-start">Equipo:</h3>
           </IonText>
           {/* Here should be the slider of the team images */}
         </div>
