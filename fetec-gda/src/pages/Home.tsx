@@ -1,6 +1,16 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import ElementCard from "../components/ElementCard";
+import "./Home.css";
+import brands from "../data/brands";
 
 const Home: React.FC = () => {
   return (
@@ -16,7 +26,20 @@ const Home: React.FC = () => {
             <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Home page" />
+        <IonGrid>
+          {brands.map((brand) => (
+            <IonRow key={brand.id}>
+              <IonCol>
+                <ElementCard
+                  name={brand.name}
+                  founder={brand.founder}
+                  imgPath={brand.imgPath}
+                  description={brand.description}
+                />
+              </IonCol>
+            </IonRow>
+          ))}
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

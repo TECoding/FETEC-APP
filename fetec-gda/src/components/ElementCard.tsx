@@ -1,14 +1,42 @@
-import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonImg } from '@ionic/react';
+import {
+  IonCard,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonModal,
+} from "@ionic/react";
+import React, { useState } from "react";
+import DetailsModal from "./DetailsModal";
 
-const ElementCard: React.FC = () => {
+interface ContainerProps {
+  name: string;
+  founder: string;
+  imgPath: string;
+  description: string;
+}
+
+const ElementCard: React.FC<ContainerProps> = (props) => {
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <IonCard color="tertiary" button>
-        <IonImg src="/assets/images/example-1.jpg"></IonImg>
+    <>
+      <IonModal isOpen={showModal} swipeToClose={true}>
+        <DetailsModal
+          brandName={props.name}
+          brandFounder={props.founder}
+          brandImgPath={props.imgPath}
+          brandDescription={props.description}
+          clickHandler={() => setShowModal(false)}
+        />
+      </IonModal>
+      <IonCard color="tertiary" button onClick={() => setShowModal(true)}>
+        <img src={props.imgPath} alt={props.name} />
         <IonCardHeader>
-            <IonCardTitle>Brand Name</IonCardTitle>
-            <IonCardSubtitle>Nombre de Fundador(a)</IonCardSubtitle>
+          <IonCardTitle>{props.name}</IonCardTitle>
+          <IonCardSubtitle>{props.founder}</IonCardSubtitle>
         </IonCardHeader>
-    </IonCard>
+      </IonCard>
+    </>
   );
 };
 
