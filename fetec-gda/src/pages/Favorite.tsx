@@ -1,8 +1,22 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Favorite.css'; 
+import {
+  IonCol,
+  IonContent,
+  IonGrid,
+  IonHeader,
+  IonIcon,
+  IonNote,
+  IonPage,
+  IonRow,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/react";
+import { planetOutline } from "ionicons/icons";
+import ElementCard from "../components/ElementCard";
+import brands from "../data/brands";
+import "./Favorite.css";
 
 const Favorite: React.FC = () => {
+  const favorites = brands.filter((brand) => brand.favorite === true);
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +30,28 @@ const Favorite: React.FC = () => {
             <IonTitle size="large">Favorite</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Favorite page" />
+        {favorites.length !== 0 ? (
+          <IonGrid>
+            <IonRow>
+              {favorites.map((brand) => (
+                <IonCol key={brand.id} className="ion-no-padding">
+                  <ElementCard
+                    name={brand.name}
+                    founder={brand.founder}
+                    imgPath={brand.imgPath}
+                    description={brand.description}
+                  />
+                </IonCol>
+              ))}
+            </IonRow>
+          </IonGrid>
+        ) : (
+          <div className="IonNote-wrapper">
+            <IonNote>
+              You haven´t added anything yet <IonIcon icon={planetOutline} />
+            </IonNote>
+          </div>
+        )}
       </IonContent>
     </IonPage>
   );
