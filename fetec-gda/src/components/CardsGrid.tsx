@@ -28,6 +28,7 @@ const CardsGrid: React.FC<GridProps> = ({cards}) => {
                       name={card.name}
                       founder={card.founder}
                       imgPath={card.imgPath}
+                      description={card.description}
                     />
                   </IonCol>
               ))}

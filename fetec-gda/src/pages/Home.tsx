@@ -27,18 +27,7 @@ const Home: React.FC = () => {
             <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        
-        <CardsGrid cards={brands}/>
-
-      </IonContent>
-    </IonPage>
-  );
-};
-
-export default Home;
-
-
-/*<IonGrid>
+        <IonGrid>
           {brands.map((brand) => (
             <IonRow key={brand.id}>
               <IonCol>
@@ -51,4 +40,12 @@ export default Home;
               </IonCol>
             </IonRow>
           ))}
-        </IonGrid>*/
+        </IonGrid>
+        {/* <CardsGrid cards={brands}/> */}
+
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Home;
