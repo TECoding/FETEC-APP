@@ -13,6 +13,9 @@ interface ModalProps {
   brandFounder: string;
   brandImgPath: string;
   brandDescription: string;
+  instagram: string;
+  facebook: string;
+  team: string[];
   clickHandler: () => void;
 }
 

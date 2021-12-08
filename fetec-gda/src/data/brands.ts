@@ -51,7 +51,7 @@ const brands = [
     imgPath: "/assets/images/brand4.jpg",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
+    team: ["founder1", "founder2", "founder3"],
     favorite: false,
   },
   {
@@ -62,7 +62,7 @@ const brands = [
     imgPath: "/assets/images/brand5.jpg",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
+    team: ["founder1", "founder2", "founder3"],
     favorite: false,
   },
 ];

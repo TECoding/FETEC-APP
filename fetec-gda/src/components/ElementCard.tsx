@@ -6,6 +6,7 @@ import {
   IonModal,
 } from "@ionic/react";
 import React, { useState } from "react";
+import { parentPort } from "worker_threads";
 import DetailsModal from "./DetailsModal";
 
 interface ContainerProps {
@@ -13,6 +14,9 @@ interface ContainerProps {
   founder: string;
   imgPath: string;
   description: string;
+  instagram: string;
+  facebook: string;
+  team: string[];
 }
 
 const ElementCard: React.FC<ContainerProps> = (props) => {
@@ -26,6 +30,9 @@ const ElementCard: React.FC<ContainerProps> = (props) => {
           brandFounder={props.founder}
           brandImgPath={props.imgPath}
           brandDescription={props.description}
+          instagram={props.instagram}
+          facebook={props.facebook}
+          team={props.team}
           clickHandler={() => setShowModal(false)}
         />
       </IonModal>
