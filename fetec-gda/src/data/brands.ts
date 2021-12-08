@@ -5,6 +5,9 @@ const brands = [
     founder: "Founder0",
     description: "This is the description of the brand number zero",
     imgPath: "/assets/images/brand0.jpg",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
     favorite: false,
   },
   {
@@ -13,6 +16,9 @@ const brands = [
     founder: "Founder1",
     description: "This is the description of the brand number one",
     imgPath: "/assets/images/brand1.jpg",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
     favorite: false,
   },
   {
@@ -21,6 +27,9 @@ const brands = [
     founder: "Founder2",
     description: "This is the description of the brand number two",
     imgPath: "/assets/images/brand2.jpg",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
     favorite: false,
   },
   {
@@ -29,6 +38,9 @@ const brands = [
     founder: "Founder3",
     description: "This is the description of the brand number three",
     imgPath: "/assets/images/brand3.jpg",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
     favorite: false,
   },
   {
@@ -37,6 +49,9 @@ const brands = [
     founder: "Founder4",
     description: "This is the description of the brand number four",
     imgPath: "/assets/images/brand4.jpg",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
     favorite: false,
   },
   {
@@ -45,6 +60,9 @@ const brands = [
     founder: "Founder5",
     description: "This is the description of the brand number five",
     imgPath: "/assets/images/brand5.jpg",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
     favorite: false,
   },
 ];
