@@ -7,7 +7,7 @@ const brands = [
     imgPath: "/assets/images/brand0.jpg",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
+    team: ["founder1", "founder2", "founder3"],
     favorite: false,
   },
   {
@@ -18,7 +18,7 @@ const brands = [
     imgPath: "/assets/images/brand1.jpg",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
+    team: ["founder1", "founder2", "founder3"],
     favorite: false,
   },
   {
@@ -29,7 +29,7 @@ const brands = [
     imgPath: "/assets/images/brand2.jpg",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
+    team: ["founder1", "founder2", "founder3"],
     favorite: false,
   },
   {
@@ -40,7 +40,7 @@ const brands = [
     imgPath: "/assets/images/brand3.jpg",
     instagram: "https://www.instagram.com/",
     facebook: "https://www.facebook.com/",
-    team: [{name:"founder1"}, {name:"founder2"}, {name:"founder3"}],
+    team: ["founder1", "founder2", "founder3"],
     favorite: false,
   },
   {
