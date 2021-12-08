@@ -1,0 +1,9 @@
+.member{
+    border-radius: 100%;
+}
+
+.member-card{
+    text-align: center;
+    width: 150px;
+    margin-left: 16px;
+}

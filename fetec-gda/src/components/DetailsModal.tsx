@@ -7,6 +7,7 @@ import {
   shareOutline,
 } from "ionicons/icons";
 import "./DetailsModal.css";
+import BubbleItem from "./TeamBubbles/BubbleItem";
 
 interface ModalProps {
   brandName: string;
@@ -77,6 +78,13 @@ const DetailsModal: React.FC<ModalProps> = (props) => {
           <IonText>
             <h3 className="ion-margin-start">Equipo:</h3>
           </IonText>
+          <BubbleItem
+            img_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFkEnG-lDOcZHEsEHa3IlcOU_J2pgjUM1ZaVyYZUxj5em-1OIAZuKj2Ox74G4u7s8bBA&usqp=CAU'
+            name = 'Ruy'
+            role = 'Programador'
+
+          />
+          
           {/* Here should be the slider of the team images */}
         </div>
       </div>
