@@ -2,7 +2,7 @@ import React from "react";
 import './TeamBubbles.css';
 import Teams from "../../data/Teams";
 import BubbleItem from "./BubbleItem";
-import HorizontalScroll from 'react-scroll-horizontal';
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 interface Itemprops {
     brand: string
@@ -10,8 +10,8 @@ interface Itemprops {
 
 const SliderBubble: React.FC<Itemprops> = (props) =>{
     return(
-        <div  style = {{width : '100%',height : '250px',overflow: 'hidden'}}        > 
-            <HorizontalScroll >
+        <div className = 'box' style = {{width : '100%',height : '250px'}}> 
+            <ScrollContainer className="scroll-container" vertical = {true} horizontal = {true} >
             {Teams.map((member) => (
                 (member.brand == props.brand ? 
                         <BubbleItem 
@@ -20,9 +20,8 @@ const SliderBubble: React.FC<Itemprops> = (props) =>{
                             name = {member.name} 
                             role = {member.role}/>
                     : null)
-                ))}
-            </HorizontalScroll>
-            
+                ))}        
+            </ScrollContainer>
         </div>
     )
 }

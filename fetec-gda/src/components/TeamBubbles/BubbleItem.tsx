@@ -13,7 +13,7 @@ const BubbleItem: React.FC<Itemprops> = (props) => {
             <img
                 src = {props.img_url}
                 alt = " "
-                style = {{width : '150px',height : '150px',objectFit :'cover'}}
+                style = {{width : '100px',height : '100px',objectFit :'cover'}}
                 className = "member"
             />
             <h2>{props.name}</h2>
