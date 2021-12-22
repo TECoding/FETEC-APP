@@ -13,6 +13,9 @@ interface ModalProps {
   brandFounder: string;
   brandImgPath: string;
   brandDescription: string;
+  instagram: string;
+  facebook: string;
+  team: string[];
   clickHandler: () => void;
 }
 
@@ -60,10 +63,10 @@ const DetailsModal: React.FC<ModalProps> = (props) => {
         {/* Social Media Section */}
         <div>
           <div className="ion-float-right ion-margin-end">
-            <a href="https://www.instagram.com">
+            <a href={props.instagram}>
               <IonIcon icon={logoInstagram} size="large" />
             </a>
-            <a href="https://www.facebook.com">
+            <a href={props.facebook}>
               <IonIcon
                 icon={logoFacebook}
                 size="large"
@@ -76,6 +79,11 @@ const DetailsModal: React.FC<ModalProps> = (props) => {
         <div>
           <IonText>
             <h3 className="ion-margin-start">Equipo:</h3>
+            {
+              props.team.map(member => (
+                <h3>{member}</h3>
+              ))
+            }
           </IonText>
           {/* Here should be the slider of the team images */}
         </div>

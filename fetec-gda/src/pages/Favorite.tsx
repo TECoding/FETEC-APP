@@ -40,6 +40,9 @@ const Favorite: React.FC = () => {
                     founder={brand.founder}
                     imgPath={brand.imgPath}
                     description={brand.description}
+                    instagram={brand.instagram}
+                    facebook={brand.facebook}
+                    team={brand.team}
                   />
                 </IonCol>
               ))}
