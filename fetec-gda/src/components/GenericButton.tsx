@@ -1,6 +1,8 @@
-import { IonButton, IonIcon, IonContent } from '@ionic/react';
-import {star} from 'ionicons/icons'
-import { start } from 'repl';
+import { 
+    IonButton, 
+    IonIcon, 
+    IonContent 
+} from '@ionic/react';
 
 
 interface GButtonProps {

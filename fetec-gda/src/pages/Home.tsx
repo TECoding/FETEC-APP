@@ -9,6 +9,7 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ElementCard from "../components/ElementCard";
+import CardsGrid from "../components/CardsGrid";
 import "./Home.css";
 import brands from "../data/brands";
 
@@ -40,6 +41,8 @@ const Home: React.FC = () => {
             </IonRow>
           ))}
         </IonGrid>
+        {/* <CardsGrid cards={brands}/> */}
+
       </IonContent>
     </IonPage>
   );
