@@ -7,6 +7,8 @@ import {
   shareOutline,
 } from "ionicons/icons";
 import "./DetailsModal.css";
+import BubbleItem from "./TeamBubbles/BubbleItem";
+import SliderBubble from "./TeamBubbles/SliderBubble";
 
 interface ModalProps {
   brandName: string;
@@ -85,6 +87,8 @@ const DetailsModal: React.FC<ModalProps> = (props) => {
               ))
             }
           </IonText>
+          
+          <SliderBubble brand = {props.brandName}/>
           {/* Here should be the slider of the team images */}
         </div>
       </div>
