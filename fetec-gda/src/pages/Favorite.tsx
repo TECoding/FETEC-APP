@@ -42,7 +42,6 @@ const Favorite: React.FC = () => {
                     description={brand.description}
                     instagram={brand.instagram}
                     facebook={brand.facebook}
-                    team={brand.team}
                   />
                 </IonCol>
               ))}

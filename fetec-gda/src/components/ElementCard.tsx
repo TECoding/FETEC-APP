@@ -6,7 +6,6 @@ import {
   IonModal,
 } from "@ionic/react";
 import React, { useState } from "react";
-import { parentPort } from "worker_threads";
 import DetailsModal from "./DetailsModal";
 
 interface ContainerProps {
@@ -16,31 +15,36 @@ interface ContainerProps {
   description: string;
   instagram: string;
   facebook: string;
-  team: string[];
 }
 
-const ElementCard: React.FC<ContainerProps> = (props) => {
+const ElementCard: React.FC<ContainerProps> = ({
+  name,
+  founder,
+  imgPath,
+  description,
+  instagram,
+  facebook,
+}) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
     <>
       <IonModal isOpen={showModal} swipeToClose={true}>
         <DetailsModal
-          brandName={props.name}
-          brandFounder={props.founder}
-          brandImgPath={props.imgPath}
-          brandDescription={props.description}
-          instagram={props.instagram}
-          facebook={props.facebook}
-          team={props.team}
+          name={name}
+          founder={founder}
+          imgPath={imgPath}
+          description={description}
+          instagram={instagram}
+          facebook={facebook}
           clickHandler={() => setShowModal(false)}
         />
       </IonModal>
       <IonCard color="tertiary" button onClick={() => setShowModal(true)}>
-        <img src={props.imgPath} alt={props.name} />
+        <img src={imgPath} alt={name} />
         <IonCardHeader>
-          <IonCardTitle>{props.name}</IonCardTitle>
-          <IonCardSubtitle>{props.founder}</IonCardSubtitle>
+          <IonCardTitle>{name}</IonCardTitle>
+          <IonCardSubtitle>{founder}</IonCardSubtitle>
         </IonCardHeader>
       </IonCard>
     </>

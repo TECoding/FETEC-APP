@@ -9,7 +9,6 @@ import {
   IonToolbar,
 } from "@ionic/react";
 import ElementCard from "../components/ElementCard";
-import CardsGrid from "../components/CardsGrid";
 import "./Home.css";
 import brands from "../data/brands";
 
@@ -38,14 +37,12 @@ const Home: React.FC = () => {
                   description={brand.description}
                   instagram={brand.instagram}
                   facebook={brand.facebook}
-                  team={brand.team}
                 />
               </IonCol>
             </IonRow>
           ))}
         </IonGrid>
         {/* <CardsGrid cards={brands}/> */}
-
       </IonContent>
     </IonPage>
   );
