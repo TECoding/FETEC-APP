@@ -7,7 +7,7 @@ import {
     shareOutline,
 } from "ionicons/icons";
 import "./DetailsModal.css";
-import SliderBubble from "./TeamBubbles/SliderBubble";
+import SliderBubble from "../TeamBubbles/SliderBubble";
 
 interface ModalProps {
     name: string;

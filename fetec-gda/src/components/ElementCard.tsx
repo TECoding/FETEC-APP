@@ -6,7 +6,7 @@ import {
     IonModal,
 } from "@ionic/react";
 import React, { useState } from "react";
-import DetailsModal from "./DetailsModal";
+import DetailsModal from "./DetailsModal/DetailsModal";
 
 interface ContainerProps {
     name: string;
