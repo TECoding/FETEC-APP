@@ -1,23 +1,17 @@
-import { 
-    IonButton, 
-    IonIcon, 
-    IonContent 
-} from '@ionic/react';
-
+import { IonButton, IonIcon, IonContent } from "@ionic/react";
 
 interface GButtonProps {
-    icon: string
+    icon: string;
 }
 
-const GenericButton: React.FC<{props: GButtonProps}> = ({props}) => {
-
+const GenericButton: React.FC<{ props: GButtonProps }> = ({ props }) => {
     return (
         <IonContent>
             <IonButton>
-                <IonIcon slot='icon-only' icon={props.icon} />
+                <IonIcon slot="icon-only" icon={props.icon} />
             </IonButton>
         </IonContent>
-    )
+    );
 };
 
-export default GenericButton
+export default GenericButton;
