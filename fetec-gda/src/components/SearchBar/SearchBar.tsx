@@ -1,11 +1,15 @@
 import React from "react";
 import { IonSearchbar } from "@ionic/react";
 
-export const SearchBar: React.FC = () => {
+interface ContainerProps {
+    setSearchValue: Function;
+}
+
+export const SearchBar: React.FC<ContainerProps> = (props) => {
     return (
         <IonSearchbar
-            placeholder={""}
-            onIonChange={(e) => console.log(e.detail.value!)}
+            placeholder={"Search"}
+            onIonChange={(e) => props.setSearchValue(e.detail.value!)}
         ></IonSearchbar>
     );
 };
