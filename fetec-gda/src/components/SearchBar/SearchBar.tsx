@@ -5,11 +5,11 @@ interface ContainerProps {
     setSearchValue: Function;
 }
 
-export const SearchBar: React.FC<ContainerProps> = (props) => {
+export const SearchBar: React.FC<ContainerProps> = ({ setSearchValue }) => {
     return (
         <IonSearchbar
             placeholder={"Search"}
-            onIonChange={(e) => props.setSearchValue(e.detail.value!)}
+            onIonChange={(e) => setSearchValue(e.detail.value!)}
         ></IonSearchbar>
     );
 };
