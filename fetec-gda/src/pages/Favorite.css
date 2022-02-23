@@ -5,3 +5,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.IonNote-wrapper--NoResults {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
