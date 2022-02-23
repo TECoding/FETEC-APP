@@ -8,16 +8,18 @@ import {
     IonNote,
     IonPage,
     IonRow,
+    IonSearchbar,
     IonTitle,
     IonToolbar,
 } from "@ionic/react";
 import { searchCircleOutline } from "ionicons/icons";
 
 import ElementCard from "../components/ElementCard";
-import { SearchBar } from "../components/SearchBar/SearchBar";
-import brands from "../data/brands";
 import { getBrandsByName } from "../selectors/getBrandsByName";
+import brands from "../data/brands";
+
 import "./Home.css";
+import "../theme/styles.css";
 
 const Home: React.FC = () => {
     const [searchValue, setSearchValue] = useState("");
@@ -35,16 +37,20 @@ const Home: React.FC = () => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Home</IonTitle>
+                    <IonTitle className="fontSize-25">Home</IonTitle>
+                </IonToolbar>
+                <IonToolbar>
+                    <IonSearchbar
+                        className="rounded-20"
+                        type="text"
+                        color="light"
+                        placeholder={"Search"}
+                        onIonChange={(e) => setSearchValue(e.detail.value!)}
+                    />
                 </IonToolbar>
             </IonHeader>
+
             <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Home</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                <SearchBar setSearchValue={setSearchValue} />
                 <IonGrid>
                     {brandsArr.length > 0 ? (
                         brandsArr.map((brand) => (

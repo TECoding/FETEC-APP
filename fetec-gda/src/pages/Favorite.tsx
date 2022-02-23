@@ -8,16 +8,18 @@ import {
     IonNote,
     IonPage,
     IonRow,
+    IonSearchbar,
     IonTitle,
     IonToolbar,
 } from "@ionic/react";
 import { planetOutline, searchCircleOutline } from "ionicons/icons";
 
 import ElementCard from "../components/ElementCard";
-import { SearchBar } from "../components/SearchBar/SearchBar";
 import { getBrandsByName } from "../selectors/getBrandsByName";
 import brands from "../data/brands";
+
 import "./Favorite.css";
+import "../theme/styles.css";
 
 const Favorite: React.FC = () => {
     const favorites = brands.filter((brand) => brand.favorite === true);
@@ -37,16 +39,19 @@ const Favorite: React.FC = () => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Favorite</IonTitle>
+                    <IonTitle className="fontSize-25">Favorite</IonTitle>
+                </IonToolbar>
+                <IonToolbar>
+                    <IonSearchbar
+                        className="rounded-20"
+                        type="text"
+                        color="light"
+                        placeholder={"Search"}
+                        onIonChange={(e) => setSearchValue(e.detail.value!)}
+                    />
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Favorite</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
-                <SearchBar setSearchValue={setSearchValue} />
                 {favsArr.length > 0 ? (
                     <IonGrid>
                         <IonRow>
