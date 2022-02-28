@@ -24,6 +24,7 @@ const brands = [
                 role: "Vicepresidente",
             },
         ],
+        category: "Technology",
         favorite: false,
     },
     {
@@ -51,6 +52,7 @@ const brands = [
                 role: "Vicepresidente",
             },
         ],
+        category: "Food & Drinks",
         favorite: false,
     },
     {
@@ -78,6 +80,7 @@ const brands = [
                 role: "Vicepresidente",
             },
         ],
+        category: "Technology",
         favorite: false,
     },
     {
@@ -105,6 +108,7 @@ const brands = [
                 role: "Vicepresidente",
             },
         ],
+        category: "Fashion",
         favorite: false,
     },
     {
@@ -132,6 +136,7 @@ const brands = [
                 role: "Vicepresidente",
             },
         ],
+        category: "Art",
         favorite: false,
     },
     {
@@ -159,6 +164,7 @@ const brands = [
                 role: "Vicepresidente",
             },
         ],
+        category: "Green world",
         favorite: false,
     },
 ];
